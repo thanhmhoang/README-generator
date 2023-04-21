@@ -2,10 +2,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// Linking to where generated README will be saved
+const generateREADME = require('./assets/generateMarkdown.js')
 
-inquirer
+const questions = () => {
+return inquirer
   .prompt([
     {
         type: 'input',
@@ -25,7 +26,7 @@ inquirer
     {
         type: 'input',
         name: 'usage',
-        message: 'What are the usage infroamtion for your project?',
+        message: 'Please provide a usage description to your project?',
     },
     {
         type: 'list',
@@ -34,21 +35,15 @@ inquirer
         choices: ["MIT", "Apache", "GPL"],
     },
     {
-        type: 'list',
-        name: 'badge',
-        message: 'Please choose the corresponding badge for your license',
-        choices: []
-    },
-
-    {
         type: 'input',
         name: 'contribution',
         message: 'What are the contribution guidelines for your project?',
     },
     {
         type: 'input',
-        name: 'test',
-        message: 'What are the test instructions for your project?',
+        name: 'test', 
+        message: 'What should users type in the command line to test your project?',
+        default: 'npm test'
     },
     {
         type: 'input',
@@ -59,13 +54,22 @@ inquirer
         type: 'input',
         name: 'email',
         message: 'What is your email address?',
-    },                   
-  ])
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    }
+]);
+};
 
-// TODO: Create a function to initialize app
-function init() {}
+const writeFile = response =>
+    fs.writeFile('generatedREADME.md', data, err => {
+    })
 
-// Function call to initialize app
-init();
+questions()
+.then(answers => {
+    return generateREADME(response);
+})
+.then(data => {
+    return writeFile(data);
+})
+.catch(err => {
+    console.log(err)
+})
+
