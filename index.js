@@ -27,7 +27,7 @@ inquirer
         type: 'list',
         name: 'license',
         message: 'What license did you use for this project?',
-        choices: ["MIT", "Apache", "GPL"],
+        choices: ["MIT", "Apache", "GPL", "BSD", "GNU"],
     },
     {
         type: 'input',
@@ -53,56 +53,58 @@ inquirer
   ])
 
   .then((response) => {
-    fs.writeFile("./assets/README.md", 
+    fs.writeFile("./assets/README.md",
+
     `
+    ![${response.license}](https://img.shields.io/badge/license-${response.license}-green)
+
     ## Title: 
-  
+
     ${response.title}
-      
+
     ## Description
-      
+
     ${response.description}
-    
+
     ## Table of Contents
-    
     * [Installation](#installation)
     * [Usage](#usage)
     * [License](#license)
     * [Contributing](#contributing)
     * [Tests](#tests)
     * [Questions](#questions)
-      
+    
     ## Installation 
-    
+
     ${response.installation}
-      
+
     ## Usage
-     
+
     ${response.usage}
-      
+
     ## License
-      
+
     ${response.license}
-      
+
     ## Contributing
-      
+
     [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-     
+
     ${response.contribution}
-      
+
     ## Tests
-    
+
     ${response.test}
-      
+
     ## Questions
-      
+
     Please view my projects at:
     GitHub: https://github.com/${response.github}
     
     If there are any questions, please contact me at:
     Email: ${response.email}
     `,
-      (err) => (err ? console.log(err) : console.log("Success!"))
-    );
-  });
+    (err) => (err ? console.log(err) : console.log("Success!"))
+);
+});
 
