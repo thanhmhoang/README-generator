@@ -48,6 +48,8 @@ node index.js
 ```
 Users will be then prompted with a series of questions, once the user as completed all of the quesitons, a README.md file will populate in the "assets" folder. There users can make an edits or changes they would like.
 
+<img src="./assets/README generator.gif">
+
 ## Credits
 
 Thien Nguyen - Former UW Bootcamp student

@@ -58,7 +58,7 @@ inquirer
     `
     ![${response.license}](https://img.shields.io/badge/license-${response.license}-green)
 
-    ## Title: 
+    # Title
 
     ${response.title}
 
@@ -100,7 +100,7 @@ inquirer
 
     Please view my projects at:
     GitHub: https://github.com/${response.github}
-    
+
     If there are any questions, please contact me at:
     Email: ${response.email}
     `,
