@@ -1,58 +1,58 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const generateMarkdown = response => {
-  return `# ${response.title}
-  ![GitHub License](http://img.shields.io/badge/license-${respone.license}-blue.svg)
+// const generateMarkdown = response => {
+//   return `# ${response.title}
+//   ![GitHub License](http://img.shields.io/badge/license-${respone.license}-blue.svg)
   
   
-  ## Title: 
+//   ## Title: 
   
-  ${response.title}
+//   ${response.title}
   
-  ## Description
+//   ## Description
   
-  ${response.description}
+//   ${response.description}
 
-  ## Table of Contents
+//   ## Table of Contents
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+//   * [Installation](#installation)
+//   * [Usage](#usage)
+//   * [License](#license)
+//   * [Contributing](#contributing)
+//   * [Tests](#tests)
+//   * [Questions](#questions)
   
-  ## Installation 
+//   ## Installation 
 
-  ${response.installation}
+//   ${response.installation}
   
-  ## Usage
+//   ## Usage
  
-  ${response.usage}
+//   ${response.usage}
   
-  ## License
+//   ## License
   
-  ${response.license}
+//   ${response.license}
   
-  ## Contributing
+//   ## Contributing
   
-  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+//   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
  
-  ${response.contribution}
+//   ${response.contribution}
   
-  ## Tests
+//   ## Tests
 
-  ${response.test}
+//   ${response.test}
   
-  ## Questions
+//   ## Questions
   
-  If there are any questions, please contact me at:
-  GitHub: https://github.com/${response.github}
+//   If there are any questions, please contact me at:
+//   GitHub: https://github.com/${response.github}
 
-  If there are any questions, please contact me at:
-  Email: ${response.email}
+//   If there are any questions, please contact me at:
+//   Email: ${response.email}
  
-  `;
-}
+//   `;
+// }
 
-module.exports = generateMarkdown;
+// module.exports = generateMarkdown;
